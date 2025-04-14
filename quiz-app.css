@@ -82,7 +82,7 @@ h2 {
 }
 
 .nav-links a:hover {
-  color: cadetblue;
+  color: #79d9f1;
 }
 
 .hamburger {
@@ -123,13 +123,12 @@ h2 {
     top: 80px;
     right: 0;
     width: auto;
-    background-color: white;
+    background-color: #ffff;
     padding: 20px;
-    border: 1px solid #ccc;
+    box-shadow: 0 0 10px #79d9f1;
     z-index: 1;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-right: 20px;
-    align-items: flex-end;
+    align-items: flex-start;
     flex-direction: column;
     transform: translateX(100%);
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
