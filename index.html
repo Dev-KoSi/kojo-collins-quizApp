@@ -9,11 +9,23 @@
 </head>
 <body>
     <div class="structure">
-        <!-- Header Section -->
-        <div class="header">
-
-        </div>
-
+       
+<header>
+  <nav>
+    <h2>Book Game</h2>
+    <ul class="nav-links">
+      <li><a href="#">Math</a></li>
+      <li><a href="#">IT</a></li>
+      <li><a href="#">Science</a></li>
+      <li><a href="#">Geography</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
         <!-- Q-A Section -->
         <div class="Q-A-section">
             <div class="subject">
@@ -33,9 +45,16 @@
         </div>
 
         <!-- Footer Section -->
-        <div class="dashboard">
-            
-        </div>
+          <div class="record">
+            <div class="ques">
+                <h3 class="q-h3">Question</h3>
+                <span>1</span> of 2
+            </div>
+            <div class="score">
+                <h3 class="s-h3">Score</h3>
+                <span>3</span> of 60
+            </div>
+          </div>
     </div>
 
     <script src="quiz-app.js"></script>
