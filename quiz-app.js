@@ -172,13 +172,13 @@ function  generateQ(){
         <div class="answers ans-a" data-ans-a="${value.options[0]}">  
            A. ${value.options[0]}
           </div>
-          <div class="answers ans-b">
+          <div class="answers ans-b"  data-ans-b="${value.options[0]} ">
            B. ${value.options[1]}
           </div>
-          <div class="answers ans-c">
+          <div class="answers ans-c"  data-ans-c="${value.options[0]}">
            C. ${value.options[2]}
           </div>
-          <div class="answers ans-d">
+          <div class="answers ans-d"  data-ans-d="${value.options[0]}">
            D. ${value.options[3]}
           </div>
       </div>
@@ -186,22 +186,33 @@ function  generateQ(){
    document.querySelector(".Q-A-section").innerHTML =html;
 
 })
-}
-generateQ();
-
 document.querySelectorAll(".answers").forEach((ans)=>{
   ans.addEventListener("click",()=>{
     const ansA = ans.dataset.ansA;
+    const ansB = ans.dataset.ansB;
+    const ansC = ans.dataset.ansC;
+    const ansD = ans.dataset.ansD;
     console.log(ansA);
+    console.log(ansB);
+    console.log(ansC);
+    console.log(ansD);
 
     
     [mathQuestions[nexQ]].forEach((index)=>{
-      if(ansA === index.correctAnswer){
+      if(ansA || ansB || ansC || ansD   === index.correctAnswer){
         
       }
     })
     nexQ ++;
+    generateQ()
   })
 })
+}
+  
+generateQ();
+
+document.querySelector(".question-number").innerHTML = ``
+ 
+
 
 // console.log([mathQuestions[2]]);
